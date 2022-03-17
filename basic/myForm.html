@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單練習</title>
+		<link rel="stylesheet" href="./style.css"/>
+</head>
+
+<body>
+    <!--https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input-->
+    <!--method:"POST"的結果不會出現在網址內-->
+    <form action="" method="GET">
+			<label for="myname">姓名</label>
+			<input 
+				id="myname" 
+				type="text" 
+				name="inputName" 
+				placeholder="請輸入真實姓名"
+			/>
+			<!--這裡加value，就會有預設的input-->
+			<br />
+			<!-- 這個for和id一樣可以讓你點擊姓名時，輸入欄同時被選取-->
+			<!-- 這個name，就是實際回傳的資料(""內是自己定的)-->
+			<label for="email">信箱</label>
+			<input id="email" type="email" name="email" required/>
+			<br />
+			<label for="password">密碼</label>
+			<input id="password" type="password" name="password" minlength="5" maxlength="15"/>
+			<br/>
+			<label for="age"> 年齡</label>
+			<input 
+				id="age" 
+				type="number" 
+				name="age" 
+				value="18" 
+				min="0" 
+				max="180"
+				step="1"
+			/>
+			<br />
+				<!-- radio用於多個選一個的情形，name只要一樣就會將其設為同一個集合 -->
+			<input id="male" type="radio" name="gender" value="male" required/>
+			<label for="male">男性</label>
+			<input id="female" type="radio" name="gender" value="female" />
+			<label for="female">女性</label>
+			<input id="other" type="radio" name="gender" value="othe" />
+			<label for="othe">其他</label>
+			<br />
+			<label for="country">國家</label>
+			<select name="country" id="country" required>
+				<option></option>
+				<option value="taiwan">台灣</option>
+				<option value="hongkong">香港</option>
+				<option value="china">大陸</option>
+			</select>
+			<br/>
+			<label for="employee">職業</label>
+			<input list="employeeList" type="text" name="employee" id="employee"/>
+			<datalist id="employeeList">
+				<option value="工程業">工程</option>
+				<option value="會計業">會計</option>
+				<option value="服務業">服務</option>
+				<option value="自由業">自由</option>
+			</datalist>
+			<br />
+			<input type="checkbox" id="checkBox" name="lemou" value="youAre" />
+			<label for="checkBox">你是狸貓嗎?</label>
+			<br />
+			<input type="checkbox" id="checkBox" name="human" value="youAres" checked/>
+			<label for="checkBox">你是人類嗎?</label>
+			
+			
+			<br/>
+			<label for="suggestion">給我的建議</label>
+			<br/>
+			<textarea
+				name="suggestion"
+				id="suggestion"
+				cols="30"
+				rows="10"
+			></textarea>
+
+			<br />
+			<button type="submit">提交</button>
+			
+    </form>
+</body>
+
+</html>

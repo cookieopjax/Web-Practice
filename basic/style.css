@@ -1,0 +1,51 @@
+/*exteral Styling-*/
+
+/* universal selector */
+* {
+  color: rgb(6, 1, 10);
+}
+
+/* element selector */
+h1 {
+  color: rgb(0, 206, 127);
+}
+
+/* id selector */
+#car {
+  color: rgb(64, 255, 175);
+}
+
+/* class seletor */
+.blueText {
+  color: rgb(30, 0, 163);
+}
+
+.largeText {
+  font-size: 2rem;
+}
+
+/* 可併用
+h1.blueText{
+    符合上二的，可套用此css
+}*/
+
+/* grouping selector */
+h2,
+h3 {
+  color: orange;
+}
+
+/* descenedent selector */
+div.tablesss h2 {
+  color: brown;
+}
+
+/*attribute selector*/
+input[type="text"] {
+  color: rgb(141, 52, 0);
+}
+
+/*pseudo class*/
+input[type="email"] :active {
+  color: rgb(0, 87, 68);
+}
