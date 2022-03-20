@@ -32,12 +32,15 @@ header {
   background-size: cover;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /*寬度不構，自動往下*/
 }
 
 .coverImg {
-  height: 420px;
-  padding: 2rem;
+  width: 500px;
+  /*圖片大於500時不再變大*/
+  max-width: 100%; /*不使用width:100% 是因避免圖片解析度不好，隨父元素被放大時會糊掉*/
+  height: auto;
+  padding: 4.5rem 2rem 2rem 2rem;
 }
 
 /*--------nav bar--------*/
@@ -45,6 +48,11 @@ nav {
   background-color: rgb(0, 4, 63);
   display: flex;
   justify-content: space-between;
+  position: sticky;
+
+  position: fixed;
+  min-width: 100%;
+  opacity: 0.84;
 }
 
 .iconAndTitle {
@@ -86,20 +94,27 @@ nav ul li a {
 }
 
 /*-------內容區塊--------*/
-.content {
+main section {
+  /* border: 2px solid black; */
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 section div img {
+  width: 800px;
+  max-width: 100%; /*不使用width:100% 是因避免圖片解析度不好，隨父元素被放大時會糊掉*/
+  height: auto;
   display: flex;
-  height: 400px;
-  padding: 2rem 2rem 2rem 20rem;
+  padding: 2rem;
+  flex: 1 1 400px;
 }
 
 .word {
   flex-direction: column;
   display: flex;
-  padding: 2rem 20rem 2rem 2rem;
+  padding: 2rem;
+  flex: 1 1 400px;
 }
 
 .word h2 {
