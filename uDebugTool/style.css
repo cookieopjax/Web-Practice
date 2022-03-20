@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  color: rgb(6, 82, 145);
+}
+
+.horizontalRule {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/*--------封面大圖及文字--------*/
+header {
+  background-image: url(./image/blurBackgroud.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.coverImg {
+  height: 420px;
+  padding: 2rem;
+}
+
+/*--------nav bar--------*/
+nav {
+  background-color: rgb(0, 4, 63);
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconAndTitle {
+  display: flex;
+}
+
+.navLink {
+  display: flex;
+}
+
+nav img {
+  padding-left: 15px;
+  height: 50px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+nav ul li {
+  padding: 0.5rem 0.75rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/*--------大標題--------*/
+
+.title {
+  display: flex;
+  background-color: rgb(223, 223, 223);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/*-------內容區塊--------*/
+.content {
+  display: flex;
+}
+
+section div img {
+  display: flex;
+  height: 400px;
+  padding: 2rem 2rem 2rem 20rem;
+}
+
+.word {
+  flex-direction: column;
+  display: flex;
+  padding: 2rem 20rem 2rem 2rem;
+}
+
+.word h2 {
+  padding: 0.65rem 0;
+}

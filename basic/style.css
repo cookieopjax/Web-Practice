@@ -1,27 +1,57 @@
-/*exteral Styling-*/
+/*external Styling-*/
+/*cascading 階層式的 下方會往上覆蓋*/
+/* 把滑鼠游標移到css開頭，會顯示其Selector Specificity，越大著會覆蓋其他的*/
 
 /* universal selector */
+
 * {
+  font-family: "Noto Sans TC", sans-serif;
   color: rgb(6, 1, 10);
 }
 
 /* element selector */
 h1 {
-  color: rgb(0, 206, 127);
+  opacity: 0.8; /*透明度*/
+
+  /*漸變過渡 transition : property name, duration, timing function */
+  transition: all 0.75s ease-in;
 }
 
+h1:hover {
+  /*移動物件 transform:translate() 用法較複雜建議查資料 注意移動重心
+  旋轉物件 transform:rotate(90deg) 
+  縮放物件 transform:scale(2,3) 寬和高分別放大 會維持本身中心 */
+  background-color: rgb(0, 78, 78);
+  color: white;
+}
+
+p {
+  text-indent: 32px;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+table {
+  width: 500px;
+}
 /* id selector */
 #car {
   color: rgb(64, 255, 175);
 }
 
-/* class seletor */
+/* class selector */
 .blueText {
   color: rgb(30, 0, 163);
 }
 
 .largeText {
   font-size: 2rem;
+}
+
+.pic {
+  cursor: pointer; /*滑鼠游標改變*/
 }
 
 /* 可併用
@@ -35,7 +65,28 @@ h3 {
   color: orange;
 }
 
-/* descenedent selector */
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.5rem 0.75rem;
+}
+
+th {
+  background-color: rgb(201, 248, 248);
+  font-size: 1.25rem;
+}
+
+td:hover {
+  background-color: rgb(224, 236, 236);
+}
+
+/* descendent selector */
 div.tablesss h2 {
   color: brown;
 }
@@ -48,4 +99,19 @@ input[type="text"] {
 /*pseudo class*/
 input[type="email"] :active {
   color: rgb(0, 87, 68);
+}
+
+/*pseudo element
+1. 每一個p前面都加上紅色的>>
+p::before {
+  content: ">>";
+  color: red;
+}
+2. 滑鼠選取起來的顏色改變
+*::selection{
+  background-color:;
+}*/
+
+p::first-letter {
+  font-size: 2rem;
 }

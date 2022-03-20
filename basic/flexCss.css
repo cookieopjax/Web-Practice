@@ -1,0 +1,37 @@
+div.container {
+  height: 500px;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /*被擠壓時最小寬度不變，而是往下變換位置*/
+  justify-content: center; /*方形平行位置*/
+  /*align-items: center; /*方形垂直位置*/
+  /*justify-content: space-evenly;*/
+}
+
+.box {
+  width: 150px; /*這是他的最大寬度*/
+  /* height: 150px; */
+
+  /*flex : grow, shrink, basis*/
+}
+
+.box1 {
+  /*flex-grow: 1; 不指定寬度，而是根據空間去分布*/
+  /*flex-basis: 150px 小於此寬度時開始移動到下面*/
+  background-color: aqua;
+
+  flex: 1 1 200px;
+}
+.box2 {
+  background-color: rgb(183, 0, 255);
+}
+.box3 {
+  background-color: rgb(255, 89, 89);
+}
+.box4 {
+  background-color: rgb(159, 255, 114);
+}
+.box5 {
+  background-color: rgb(255, 145, 0);
+}
